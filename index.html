@@ -120,6 +120,8 @@
       ctx.setTransform(scale, 0, 0, scale, 0, 0);
 
       if (state.image) {
+        state.soundScheduled = true
+        scheduleSound()
         prepareSketch(state.image);
       } else {
         drawEmptyState();
