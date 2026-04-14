@@ -292,6 +292,7 @@
 
     function loadImage() {
       if (!monkeyImage.complete || !monkeyImage.naturalWidth) {
+        state.soundScheduled = true
         drawEmptyState();
         return;
       }
