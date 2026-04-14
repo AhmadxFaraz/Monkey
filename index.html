@@ -302,6 +302,7 @@
 
     restartButton.addEventListener("click", () => {
       if (!state.image) {
+        scheduleSound()
         loadImage();
         return;
       }
@@ -327,6 +328,7 @@
     resizeCanvas();
 
     if (monkeyImage.complete) {
+      scheduleSound()
       loadImage();
     } else {
       monkeyImage.addEventListener("load", loadImage, { once: true });
